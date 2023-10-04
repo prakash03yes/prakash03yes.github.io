@@ -1,0 +1,16 @@
+.header {
+  @apply fixed top-0 left-0 right-0 z-50;
+}
+
+.header__container {
+  @apply px-5 py-5;
+}
+
+.header__navItems {
+  @apply flex items-center justify-end gap-4;
+}
+
+.hader__navLink {
+  @apply font-600 text-sm text-gray800;
+  @apply hover:text-white;
+}

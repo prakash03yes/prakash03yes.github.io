@@ -1,0 +1,43 @@
+{/* Colors.stories.mdx */}
+
+import { Meta, Typeset } from "@storybook/blocks";
+
+<Meta title="Typography" />
+
+export const typography = {
+  type: {
+    Montserrat: ["Montserrat", "sans-serif"],
+  },
+  weight: {
+    regular: "400",
+    semibold: "600",
+    bold: "700",
+  },
+  size: {
+    s80: 80,
+    s50: 50,
+    s33: 33,
+    s30: 30,
+    s22: 22,
+    s18: 18,
+    s16: 16,
+    s14: 14,
+    s12: 12,
+    s10: 10,
+  },
+};
+
+export const SampleText = "This is an amazing project! So cool to test! Whats up!";
+
+# Typography
+
+**Font:** Montserrat
+
+**Weights:** 400(regular),600(semibold), 700(bold),
+
+<Typeset
+  fontSizes={Object.values(typography.size).map(Number)}
+  fontWeight={typography.weight.semibold}
+  sampleText={SampleText}
+  fontFamily={typography.type.Montserrat}
+/>
