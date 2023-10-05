@@ -3,6 +3,7 @@ import clsx from 'clsx';
 import StarsBackground from './components/StarsBackground';
 import { Canvas } from '@react-three/fiber';
 import { OrbitControls } from '@react-three/drei';
+import { Container } from '@/_components/blocks';
 
 
 
@@ -15,7 +16,7 @@ const Banner: React.FC<Props> = (props) => {
 
     return (
         <section className={clsx(className, "relative")} id='home'>
-            <div className={clsx("container", ["px-5 flex items-center justify-center h-screen"])} >
+            <Container className={clsx(["flex items-center justify-center h-screen"])}>
                 <div className="absolute inset-0 w-screen h-screen">
                     <Canvas camera={{ position: [0, 0, -500] }}>
                         <OrbitControls
@@ -43,7 +44,7 @@ const Banner: React.FC<Props> = (props) => {
                         Let's build something amazing together!
                     </p>
                 </div>
-            </div>
+            </Container>
         </section>
     );
 }

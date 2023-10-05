@@ -1,6 +1,7 @@
 import clsx from 'clsx';
 import React from 'react';
 import classes from './Header.module.css';
+import { Button } from '@/_components/form';
 
 type Props = {
     className?: string,
@@ -26,6 +27,14 @@ const Header: React.FC<Props> = (props) => {
                         </li>
                         <li className={classes.hader__navItem}>
                             <a href="#" className={classes.hader__navLink}>Contact</a>
+                        </li>
+                        <li className={classes.hader__navItem}>
+                            <Button
+                                className='ml-8'
+                                id="RESUME_BTN"
+                                label='Resume'
+                                varient="outlined"
+                            />
                         </li>
                     </ul>
                 </nav>

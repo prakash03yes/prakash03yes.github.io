@@ -1,0 +1,8 @@
+.btn {
+  @apply cursor-pointer transition-all duration-200;
+}
+
+/* -------------------------------- :disabled ------------------------------- */
+.btn:disabled {
+  @apply pointer-events-none cursor-default opacity-40;
+}

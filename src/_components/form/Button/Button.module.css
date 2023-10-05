@@ -1,5 +1,5 @@
 .btn {
-  @apply outline-none px-10 py-3 relative;
+  @apply outline-none px-8 py-2 relative;
   @apply flex items-center gap-2 justify-center;
   @apply font-600 text-sm;
   @apply border-transparent border border-solid rounded-10;

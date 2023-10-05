@@ -1,0 +1,3 @@
+.link {
+  @apply cursor-pointer transition-all duration-200;
+}

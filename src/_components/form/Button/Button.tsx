@@ -10,7 +10,7 @@ type Props = {
     color?: "primary" | "secondary",
     varient?: "contained" | "outlined",
     isLoading?: boolean,
-    idDisabled: boolean,
+    idDisabled?: boolean,
     onClick?: (e?: MouseEvent<HTMLButtonElement, globalThis.MouseEvent>) => void,
     onFocus?: (e?: FocusEvent<HTMLButtonElement, Element>) => void,
     onBlur?: (e?: FocusEvent<HTMLButtonElement, Element>) => void,
