@@ -1,6 +1,6 @@
 import React from 'react';
 import clsx from 'clsx';
-import StarsBackground from './components/StarsBackground';
+import StarsBackground from './_components/StarsBackground';
 import { Canvas } from '@react-three/fiber';
 import { OrbitControls } from '@react-three/drei';
 import { Container } from '@/_components/blocks';
