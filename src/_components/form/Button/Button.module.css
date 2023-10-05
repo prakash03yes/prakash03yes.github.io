@@ -1,0 +1,81 @@
+.btn {
+  @apply outline-none px-10 py-3 relative;
+  @apply flex items-center gap-2 justify-center;
+  @apply font-600 text-sm;
+  @apply border-transparent border border-solid rounded-10;
+  @apply transition-all duration-200;
+  @apply hover:-translate-y-0.5 active:translate-y-0.5;
+}
+
+/* -------------------------------- contained ------------------------------- */
+.btn.contained.primary {
+  @apply bg-white;
+  @apply text-grayDark;
+}
+
+.btn.contained.secondary {
+  @apply bg-grayDark;
+  @apply text-white;
+}
+
+/* -------------------------------- outlined -------------------------------- */
+.btn.outlined {
+  @apply bg-transparent;
+}
+
+.btn.outlined.primary {
+  @apply border-white;
+  @apply text-white;
+}
+
+.btn.outlined.secondary {
+  @apply border-grayDark;
+  @apply text-grayDark;
+}
+
+/* -------------------------------- :disabled ------------------------------- */
+.btn:disabled {
+  @apply pointer-events-none cursor-default opacity-40;
+}
+
+/* --------------------------------- loading -------------------------------- */
+
+.btn.loading {
+  @apply pointer-events-none cursor-default border-transparent;
+}
+
+.btn.loading .btn__label {
+  @apply opacity-0;
+}
+
+.btn.loading::after {
+  content: "";
+  @apply absolute w-5 h-5 inset-0 m-auto;
+  @apply border-4 border-transparent rounded-[50%];
+  @apply animate-appSpin;
+}
+
+.btn.loading.primary::after {
+  @apply border-t-grayDark;
+}
+
+.btn.loading.secondary::after {
+  @apply border-t-white;
+}
+/* ---------------------------------- icons --------------------------------- */
+
+.btn__icon {
+  @apply flex items-center justify-center;
+}
+
+.btn__icon svg path {
+  @apply transition-all duration-200;
+}
+
+.btn.primary .btn__icon svg path {
+  @apply fill-grayDark;
+}
+
+.btn.secondary .btn__icon svg path {
+  @apply fill-white;
+}

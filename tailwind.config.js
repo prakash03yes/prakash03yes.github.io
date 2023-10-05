@@ -1,5 +1,5 @@
 /** @type {import('tailwindcss').Config} */
-import { Colors } from './src/_constants/color.const';
+import { Colors } from './src/_constants/colors.const';
 
 export default {
   content: [
@@ -38,6 +38,15 @@ export default {
         7: "7",
         8: "8",
         9: "9",
+      },
+      keyframes: {
+        appSpin: {
+          '0%': { transform: 'rotate(0turn)' },
+          '100%': { transform: 'rotate(1turn)' },
+        }
+      },
+      animation: {
+        appSpin: 'appSpin 1s ease infinite',
       }
     },
   },
