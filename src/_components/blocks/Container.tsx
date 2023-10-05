@@ -10,7 +10,7 @@ const Container: React.FC<Props> = (props) => {
     const { className = '', children } = props;
 
     return (
-        <div className={clsx("container", className, ["px-5"])}>
+        <div className={clsx("container", className, ["px-5 mx-auto"], ["sm:px-10"])}>
             {children}
         </div>
     );

@@ -28,7 +28,7 @@ const Banner: React.FC<Props> = (props) => {
                     </Canvas>
                 </div>
 
-                <div className={clsx("home__info relative max-w-3xl")}>
+                <div className={clsx("home__info relative max-w-2xl")}>
                     <h3 className='font-600 text-sm text-gray600'>
                         Hi, I am
                     </h3>
@@ -38,8 +38,8 @@ const Banner: React.FC<Props> = (props) => {
                     <p className='font-700 text-lg text-gray800'>
                         I build things for the web.
                     </p>
-                    <p className='font-400 text-sm text-gray800 mt-4'>
-                        Frontend Software Engineer with a strong focus on user-centered products.
+                    <p className='font-500 text-sm leading-loose text-gray800 mt-4'>
+                        Frontend Software Engineer with a strong focus on user-centered products. <br />
                         Passinate to develop intuitive interfaces that prioritize user experience. <br />
                         Let's build something amazing together!
                     </p>

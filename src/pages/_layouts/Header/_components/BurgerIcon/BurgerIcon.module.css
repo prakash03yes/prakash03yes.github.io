@@ -1,0 +1,21 @@
+.burger {
+  @apply outline-none border-none;
+  @apply flex flex-col gap-1;
+}
+
+.burgerLine {
+  @apply h-0.5 w-5 bg-white rounded-10;
+  @apply transition-transform duration-200;
+}
+
+.burger.opened .burgerLine1 {
+  @apply translate-y-[6px] rotate-45;
+}
+
+.burger.opened .burgerLine2 {
+  @apply animate-spin;
+}
+
+.burger.opened .burgerLine3 {
+  @apply -translate-y-[6px] -rotate-45;
+}

@@ -1,7 +1,9 @@
 import clsx from 'clsx';
-import React from 'react';
+import React, { useState } from 'react';
 import classes from './Header.module.css';
 import { Button } from '@/_components/form';
+import BurgerIcon from './_components/BurgerIcon/BurgerIcon';
+import { Container } from '@/_components/blocks';
 
 type Props = {
     className?: string,
@@ -10,10 +12,19 @@ type Props = {
 
 const Header: React.FC<Props> = (props) => {
     const { className = '' } = props;
+    const [isHeaderOpen, setIsHeaderOpen] = useState(false);
+
+    const handleOnBurgerClick = () => {
+        setIsHeaderOpen((prev) => !prev);
+    }
 
     return (
-        <header className={clsx(className, classes.header)}>
-            <div className={clsx("container", classes.header__container)}>
+        <header className={clsx(className, classes.header, isHeaderOpen && classes.opened)}>
+            <Container className={classes.header__container}>
+                <div className={classes.header__logoWrap}>
+                    <span className='font-700 text-sm text-white'>Jp</span>
+                </div>
+
                 <nav className={classes.header__nav}>
                     <ul className={classes.header__navItems}>
                         <li className={classes.hader__navItem}>
@@ -30,7 +41,6 @@ const Header: React.FC<Props> = (props) => {
                         </li>
                         <li className={classes.hader__navItem}>
                             <Button
-                                className='ml-8'
                                 id="RESUME_BTN"
                                 label='Resume'
                                 varient="outlined"
@@ -38,9 +48,17 @@ const Header: React.FC<Props> = (props) => {
                         </li>
                     </ul>
                 </nav>
-            </div>
+
+                <BurgerIcon
+                    className={classes.header__burger}
+                    isOpen={isHeaderOpen}
+                    onClick={handleOnBurgerClick}
+                />
+            </Container>
         </header>
     );
 }
 
 export default Header;
+
+
