@@ -9,5 +9,5 @@ html {
 
 body {
   font-family: "Montserrat", sans-serif;
-  @apply bg-grayDark;
+  @apply bg-dark;
 }

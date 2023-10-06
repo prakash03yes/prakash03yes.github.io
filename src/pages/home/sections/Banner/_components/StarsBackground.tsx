@@ -1,12 +1,39 @@
-import { useRef } from 'react';
+import gsap from 'gsap';
+import { useEffect, useRef } from 'react';
 import { Stars } from '@react-three/drei';
 import { Group, Object3DEventMap } from 'three';
-import { useFrame } from '@react-three/fiber';
+import { useFrame, useThree } from '@react-three/fiber';
+import { ScrollTrigger } from 'gsap/all';
 
 
+type Props = {
+    containerRef: React.RefObject<HTMLDivElement>
+}
 
-const StarsBackground = () => {
+gsap.registerPlugin(ScrollTrigger);
+
+const StarsBackground = (props: Props) => {
+    const { containerRef } = props;
     const stageRef = useRef<Group<Object3DEventMap>>(null);
+    const { camera } = useThree();
+
+    useEffect(() => {
+        const ctx = gsap.context(() => {
+            gsap.to(camera.position, {
+                z: 500,
+                scrollTrigger: {
+                    trigger: containerRef.current,
+                    start: "top middle",
+                    markers: true,
+                    pin: true,
+                    scrub: true,
+                }
+            });
+        }, containerRef);
+        return () => ctx.revert();
+    }, [camera, containerRef]);
+
+
 
 
     useFrame((state, delta) => {
@@ -24,7 +51,7 @@ const StarsBackground = () => {
                 count={5000}
                 factor={4}
                 saturation={0}
-                speed={0.5}
+                speed={1}
             />
         </group>
     );

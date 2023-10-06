@@ -22,7 +22,7 @@ const SkillsCanvas: React.FC<Props> = (props) => {
       className={className}
       camera={{ position: [0, 0, 45], fov: 90 }}
     >
-      <color attach="background" args={[Colors.grayDark]} />
+      <color attach="background" args={[Colors.base]} />
       <CustomControls />
       <WordsSphere radius={30} words={SKILLS} />
     </Canvas>

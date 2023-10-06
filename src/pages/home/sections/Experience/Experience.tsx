@@ -14,7 +14,7 @@ const Experience: React.FC<Props> = (props) => {
     return (
         <section
             id='experience'
-            className={clsx(className, "bg-grayDark relative")}
+            className={clsx(className, "bg-dark relative")}
         >
             <Container className={clsx(["py-16"])}>
                 <div className={clsx(["flex flex-col"], ["md:flex-row"])}>

@@ -10,11 +10,11 @@
 /* -------------------------------- contained ------------------------------- */
 .btn.contained.primary {
   @apply bg-white;
-  @apply text-grayDark;
+  @apply text-dark;
 }
 
 .btn.contained.secondary {
-  @apply bg-grayDark;
+  @apply bg-dark;
   @apply text-white;
 }
 
@@ -29,8 +29,8 @@
 }
 
 .btn.outlined.secondary {
-  @apply border-grayDark;
-  @apply text-grayDark;
+  @apply border-dark;
+  @apply text-dark;
 }
 
 /* -------------------------------- :disabled ------------------------------- */
@@ -56,7 +56,7 @@
 }
 
 .btn.loading.primary::after {
-  @apply border-t-grayDark;
+  @apply border-t-dark;
 }
 
 .btn.loading.secondary::after {
@@ -73,7 +73,7 @@
 }
 
 .btn.primary .btn__icon svg path {
-  @apply fill-grayDark;
+  @apply fill-dark;
 }
 
 .btn.secondary .btn__icon svg path {

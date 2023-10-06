@@ -13,7 +13,7 @@
 .inputText__input {
   @apply border-none outline-none;
   @apply px-4 py-3;
-  @apply font-500 text-sm text-grayDark;
+  @apply font-500 text-sm text-dark;
   @apply bg-white rounded-10;
   @apply placeholder:text-gray800;
   @apply focus-visible:shadow-elevation04bp;

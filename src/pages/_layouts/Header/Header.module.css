@@ -12,7 +12,7 @@
 
 .header__nav {
   @apply fixed inset-0 h-screen w-screen px-5 py-5;
-  @apply backdrop-blur-[5px] bg-grayDark bg-opacity-80;
+  @apply backdrop-blur-[5px] bg-dark bg-opacity-80;
   @apply opacity-0 translate-x-full transition duration-300;
 
   @apply sm:static sm:translate-x-0 sm:h-auto sm:w-full;
