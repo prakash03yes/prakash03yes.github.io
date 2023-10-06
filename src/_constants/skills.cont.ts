@@ -29,4 +29,10 @@ export const SKILLS = [
     "Google Cloud Console",
     "SEO",
     "Azure",
+    "Godot",
+    "Leadership",
+    "UI/UX",
+    "SocketJs",
+    "C++",
+    "Heroku",
 ]

@@ -20,7 +20,11 @@ const SphereText: React.FC<Props> = (props) => {
     });
 
     return (
-        <Text ref={textMeshRef} position={position}>
+        <Text
+            ref={textMeshRef}
+            position={position}
+            fontSize={2}
+        >
             {text}
         </Text>
     );

@@ -12,7 +12,7 @@ const HistoryYesoryes: React.FC<Props> = (props) => {
     const { className = '' } = props;
 
     return (
-        <div className={clsx(className, ["flex flex-col order-1"])}>
+        <div className={clsx(className, ["flex flex-col"])}>
             <h3 className={clsx(["font-600 text-sm text-gray600"])}>2020 - Present</h3>
             <div className="flex flex-col">
                 <LinkButton

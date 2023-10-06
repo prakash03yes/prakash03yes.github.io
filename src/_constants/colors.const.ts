@@ -1,11 +1,12 @@
 export enum Colors {
-    grayDark = "#121212",
-    gray200 = "#414141",
-    gray400 = "#717171",
-    gray600 = "#A0A0A0",
-    gray800 = "#D0D0D0",
+    dark = "#020202",
+    base = "#121212",
+    white = "#FFFFFF",
+    gray200 = "#CCCCCC",
+    gray400 = "#999999",
+    gray600 = "#666666",
+    gray800 = "#333333",
     transparent = "transparent",
     statusError = "#F45347",
     statusErrorLight = "#FDECEA",
-    white = "#FFFFFF",
 }
