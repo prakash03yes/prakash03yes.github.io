@@ -12,15 +12,15 @@ const HistoryYesoryes: React.FC<Props> = (props) => {
     const { className = '' } = props;
 
     return (
-        <div className={clsx(className, ["flex flex-col"])}>
-            <h3 className={clsx(["font-600 text-sm text-gray600"])}>2020 - Present</h3>
-            <div className="flex flex-col">
+        <div className={clsx(className, ["flex flex-col"], ['lg:flex-row lg:gap-4'])}>
+            <h3 className={clsx(["font-600 text-sm text-gray600 whitespace-nowrap"], ["lg:pt-0.5 lg:flex-20 lg:text-right"])}>2020 - Present</h3>
+            <div className={clsx(["flex flex-col"], ["lg:flex-80 lg:max-w-[600px]"])}>
                 <LinkButton
                     id='YESORYES_LINK'
                     href={'#'}
                     className={clsx(['flex items-center gap-4', 'font-600 text-sm text-white'])}
                 >
-                    <span>Lead - Developer</span>
+                    <span className='whitespace-nowrap'>Lead - Developer</span>
                     <span className="flex items-center gap-1">
                         <CircleIcon size={8} />
                         <span>Yesoryes</span>

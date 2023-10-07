@@ -13,7 +13,6 @@ const WorkShitory: React.FC<Props> = (props) => {
 
     return (
         <div className={clsx(className, "flex flex-col gap-10")}>
-            <h2 className={clsx(["font-700 text-md text-white"])}>Work Time Travel</h2>
             <HistoryYesoryes />
             <HistorySquadhelp />
         </div>

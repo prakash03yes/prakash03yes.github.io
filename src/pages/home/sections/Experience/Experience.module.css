@@ -1,0 +1,9 @@
+.canvasContainer {
+  @apply relative;
+}
+
+.canvasContainer::after {
+  content: "";
+  @apply absolute inset-0 w-full h-full;
+  @apply sm:hidden;
+}

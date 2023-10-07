@@ -14,8 +14,8 @@ gsap.registerPlugin(ScrollTrigger);
 
 const StarsBackground = (props: Props) => {
     const { containerRef } = props;
-    const stageRef = useRef<Group<Object3DEventMap>>(null);
     const { camera } = useThree();
+    const stageRef = useRef<Group<Object3DEventMap>>(null);
 
     useEffect(() => {
         const ctx = gsap.context(() => {
