@@ -1,18 +1,39 @@
 import { Text } from '@react-three/drei';
-import { useRef } from 'react';
+import { useEffect, useRef } from 'react';
 import { useFrame } from '@react-three/fiber';
 import { Mesh, Vector3 } from 'three';
+import { useAppSelector } from '@/store/hooks';
+import gsap from 'gsap';
 
 
 
 type Props = {
-    position: Vector3,
+    tablePos: Vector3,
+    spherePos: Vector3,
     text: string,
 };
 
 const SphereText: React.FC<Props> = (props) => {
-    const { position, text } = props;
+    const { tablePos, spherePos, text } = props;
     const textMeshRef = useRef<Mesh>(null);
+    const skillsShape = useAppSelector(state => state.homeReducer.skillsShape);
+
+    useEffect(() => {
+        if (!textMeshRef.current) return;
+        if (skillsShape === "spherical") {
+            gsap.to(textMeshRef.current.position, {
+                x: spherePos.x,
+                y: spherePos.y,
+                z: spherePos.z
+            })
+        } else {
+            gsap.to(textMeshRef.current.position, {
+                x: tablePos.x,
+                y: tablePos.y,
+                z: tablePos.z
+            })
+        }
+    }, [skillsShape]);
 
     useFrame(({ camera }) => {
         if (!textMeshRef.current) return;
@@ -22,7 +43,7 @@ const SphereText: React.FC<Props> = (props) => {
     return (
         <Text
             ref={textMeshRef}
-            position={position}
+            position={tablePos}
             fontSize={2}
         >
             {text}

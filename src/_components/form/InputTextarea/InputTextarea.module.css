@@ -1,0 +1,28 @@
+.inputTextarea {
+  @apply my-4 max-w-lg;
+}
+
+.inputTextarea__container {
+  @apply flex flex-col gap-2;
+}
+
+.inputTextarea__label {
+  @apply font-600 text-sm text-white;
+}
+
+.inputTextarea__input {
+  @apply border-none outline-none;
+  @apply px-4 py-3;
+  @apply font-500 text-sm text-dark;
+  @apply bg-white rounded-10;
+  @apply placeholder:text-gray800;
+  @apply focus-visible:shadow-elevation04bp;
+}
+
+.inputTextarea.showError .inputTextarea__input {
+  @apply border border-solid border-statusError;
+}
+
+.inputTextarea__errorText {
+  @apply font-400 text-sm text-statusError;
+}

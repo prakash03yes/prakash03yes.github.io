@@ -1,10 +1,10 @@
 import { configureStore } from '@reduxjs/toolkit';
-import userReducer from './reducers/homeReducer';
+import homeReducer from './reducers/homeReducer';
 
 
 export const store = configureStore({
     reducer: {
-        userReducer,
+        homeReducer,
     },
     middleware: (getDefaultMiddleware) => getDefaultMiddleware({
         serializableCheck: {

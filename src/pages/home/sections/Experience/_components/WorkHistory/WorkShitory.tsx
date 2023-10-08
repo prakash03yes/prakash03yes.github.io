@@ -12,7 +12,7 @@ const WorkShitory: React.FC<Props> = (props) => {
     const { className = '' } = props;
 
     return (
-        <div className={clsx(className, "flex flex-col gap-10")}>
+        <div className={clsx(className, ["flex flex-col gap-10"])}>
             <HistoryYesoryes />
             <HistorySquadhelp />
         </div>

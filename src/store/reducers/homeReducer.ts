@@ -3,10 +3,12 @@ import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 
 type Props = {
     isStarsAnimating: boolean,
+    skillsShape: "spherical" | "table"
 }
 
 const initialState: Props = {
-    isStarsAnimating: false
+    isStarsAnimating: false,
+    skillsShape: "table",
 }
 
 export const homeReducer = createSlice({
@@ -16,6 +18,9 @@ export const homeReducer = createSlice({
         setIsStarsAnimating: (state, action: PayloadAction<boolean>) => {
             state.isStarsAnimating = action.payload;
         },
+        setSkillsShape: (state, action: PayloadAction<"spherical" | "table">) => {
+            state.skillsShape = action.payload;
+        },
         resethomeReducer: () => {
             return initialState;
         }
@@ -23,8 +28,9 @@ export const homeReducer = createSlice({
 });
 
 export const {
+    setIsStarsAnimating,
+    setSkillsShape,
     resethomeReducer,
-
 } = homeReducer.actions;
 
 

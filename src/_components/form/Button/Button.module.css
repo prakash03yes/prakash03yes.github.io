@@ -1,10 +1,24 @@
 .btn {
-  @apply outline-none px-8 py-2 relative;
+  @apply outline-none relative w-max;
   @apply flex items-center gap-2 justify-center;
   @apply font-600 text-sm;
   @apply border-transparent border border-solid rounded-10;
   @apply transition-all duration-200;
   @apply hover:-translate-y-0.5 active:translate-y-0.5;
+}
+
+/* ---------------------------------- size ---------------------------------- */
+.btn.sm {
+  @apply py-2 px-8;
+}
+
+.btn.md {
+  @apply py-3 px-10;
+}
+
+.btn.lg {
+  @apply py-4 px-20;
+  @apply text-base;
 }
 
 /* -------------------------------- contained ------------------------------- */

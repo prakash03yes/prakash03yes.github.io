@@ -34,7 +34,7 @@
 }
 
 .hader__navLink {
-  @apply font-600 text-sm text-gray800;
+  @apply font-600 text-sm text-gray200;
   @apply hover:text-white;
 }
 

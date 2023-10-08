@@ -8,7 +8,9 @@ type Props = {
     label: string,
     className?: string,
     color?: "primary" | "secondary",
+    size?: "sm" | "md" | "lg",
     varient?: "contained" | "outlined",
+    btnType?: "button" | "submit" | "reset",
     isLoading?: boolean,
     idDisabled?: boolean,
     onClick?: (e?: MouseEvent<HTMLButtonElement, globalThis.MouseEvent>) => void,
@@ -19,7 +21,7 @@ type Props = {
 };
 
 const Button: React.FC<Props> = (props) => {
-    const { label, id, className = '', isLoading = false, idDisabled = false, color = "primary", varient = "contained", onClick, onFocus, onBlur, startIcon = null, endIcon = null } = props;
+    const { label, id, className = '', size = "sm", btnType = "button", isLoading = false, idDisabled = false, color = "primary", varient = "contained", onClick, onFocus, onBlur, startIcon = null, endIcon = null } = props;
 
     const handleOnClick = (e: MouseEvent<HTMLButtonElement, globalThis.MouseEvent>) => {
         onClick && onClick(e);
@@ -41,10 +43,12 @@ const Button: React.FC<Props> = (props) => {
                 classes.btn,
                 classes[color],
                 classes[varient],
+                classes[size],
                 {
                     [classes.loading]: isLoading
                 }
             )}
+            type={btnType}
             disabled={idDisabled}
             onClick={handleOnClick}
             onFocus={handleOnFocus}
