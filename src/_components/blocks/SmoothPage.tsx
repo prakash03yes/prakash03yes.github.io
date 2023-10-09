@@ -1,6 +1,4 @@
-import gsap from 'gsap';
-import ScrollSmoother from 'gsap-trial/ScrollSmoother';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { appGsap, appScrollSmoother } from '@/_configs/gsap.configs';
 import React, { useLayoutEffect, useRef } from 'react';
 
 type Props = {
@@ -8,7 +6,6 @@ type Props = {
     children: React.ReactNode
 };
 
-gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
 
 const SmoothPage: React.FC<Props> = (props) => {
     const { className = '', children } = props;
@@ -16,8 +13,8 @@ const SmoothPage: React.FC<Props> = (props) => {
     const smoother = useRef<ScrollSmoother>();
 
     useLayoutEffect(() => {
-        const ctx = gsap.context(() => {
-            smoother.current = ScrollSmoother.create({
+        const ctx = appGsap.context(() => {
+            smoother.current = appScrollSmoother.create({
                 smooth: 2,
                 effects: true,
                 wrapper: "#smooth-wrapper",

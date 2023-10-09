@@ -13,7 +13,7 @@ const Copywrite: React.FC<Props> = (props) => {
     return (
         <section id="copywrite" className={clsx(className, 'bg-dark')}>
             <Container className={"flex items-center justify-center py-8"}>
-                <p className={clsx("font-400 text-sm text-white")}>
+                <p className={clsx("font-400 text-sm text-white text-center")}>
                     “I have not failed. I've just found 10,000 ways that wont work” , - Tomas Edison
                 </p>
             </Container>

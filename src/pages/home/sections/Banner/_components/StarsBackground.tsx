@@ -1,16 +1,15 @@
-import gsap from 'gsap';
 import { useEffect, useRef } from 'react';
 import { Stars } from '@react-three/drei';
 import { Group, Object3DEventMap } from 'three';
 import { useFrame, useThree } from '@react-three/fiber';
-import { ScrollTrigger } from 'gsap/all';
+import { appGsap } from '@/_configs/gsap.configs';
+
 
 
 type Props = {
     containerRef: React.RefObject<HTMLDivElement>
 }
 
-gsap.registerPlugin(ScrollTrigger);
 
 const StarsBackground = (props: Props) => {
     const { containerRef } = props;
@@ -18,8 +17,8 @@ const StarsBackground = (props: Props) => {
     const stageRef = useRef<Group<Object3DEventMap>>(null);
 
     useEffect(() => {
-        const ctx = gsap.context(() => {
-            gsap.to(camera.position, {
+        const ctx = appGsap.context(() => {
+            appGsap.to(camera.position, {
                 z: 500,
                 scrollTrigger: {
                     trigger: containerRef.current,

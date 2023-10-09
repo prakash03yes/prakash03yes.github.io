@@ -5,19 +5,22 @@ import Experience from './sections/Experience/Experience';
 import Work from './sections/Work/Work';
 import Contact from './sections/Contact/Contact';
 import Copywrite from './sections/Copywrite/Copywrite';
+import { SmoothPage } from '@/_components/blocks';
 
 
 const Home: React.FC = () => {
     return (
         <>
             <Header />
-            <main id='home'>
-                <Banner />
-                <Experience />
-                <Work />
-                <Contact />
-                <Copywrite />
-            </main>
+            <SmoothPage>
+                <main id='home'>
+                    <Banner />
+                    <Experience />
+                    <Work />
+                    <Contact />
+                    <Copywrite />
+                </main>
+            </SmoothPage>
         </>
     );
 }
