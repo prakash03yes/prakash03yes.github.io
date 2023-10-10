@@ -3,7 +3,8 @@ import { useEffect, useRef } from 'react';
 import { useFrame } from '@react-three/fiber';
 import { Mesh, Vector3 } from 'three';
 import { useAppSelector } from '@/store/hooks';
-import { appGsap } from '@/_configs/gsap.configs';
+import gsap from 'gsap';
+
 
 
 
@@ -22,13 +23,13 @@ const SphereText: React.FC<Props> = (props) => {
     useEffect(() => {
         if (!textMeshRef.current) return;
         if (skillsShape === "spherical") {
-            appGsap.to(textMeshRef.current.position, {
+            gsap.to(textMeshRef.current.position, {
                 x: spherePos.x,
                 y: spherePos.y,
                 z: spherePos.z
             })
         } else {
-            appGsap.to(textMeshRef.current.position, {
+            gsap.to(textMeshRef.current.position, {
                 x: tablePos.x,
                 y: tablePos.y,
                 z: tablePos.z

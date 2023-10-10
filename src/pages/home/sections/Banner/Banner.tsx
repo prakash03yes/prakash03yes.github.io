@@ -25,7 +25,7 @@ const Banner: React.FC<Props> = (props) => {
                     </Canvas>
                 </div>
 
-                <div className={clsx("home__info relative max-w-2xl")}>
+                <div className={clsx("home__info max-w-2xl z-1")}>
                     <h3 className='font-600 text-sm text-gray400'>
                         Hi, I am
                     </h3>

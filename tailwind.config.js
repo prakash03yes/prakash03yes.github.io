@@ -10,7 +10,7 @@ export default {
     colors: Colors,
     fontSize: {
       sm: "clamp(0.8rem, 0.08vw + 0.78rem, 0.84rem)",
-      base: "clamp(1rem, 0.23vw + 0.94rem, 1.13rem)",
+      basic: "clamp(1rem, 0.23vw + 0.94rem, 1.13rem)",
       md: "clamp(1.25rem, 0.45vw + 1.14rem, 1.5rem)",
       lg: "clamp(1.56rem, 0.79vw + 1.36rem, 2rem)",
       xl: "clamp(1.95rem, 1.29vw + 1.63rem, 2.66rem)",

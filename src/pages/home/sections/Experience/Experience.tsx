@@ -6,14 +6,14 @@ import { Container } from '@/_components/blocks';
 import { useAppDispatch } from '@/store/hooks';
 import { setSkillsShape } from '@/store/reducers/homeReducer';
 import { store } from '@/store';
-import { appGsap, appScrollTrigger } from '@/_configs/gsap.configs';
-
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 type Props = {
     className?: string,
 };
 
-
+gsap.registerPlugin(ScrollTrigger);
 const Experience: React.FC<Props> = (props) => {
     const { className = '' } = props;
     const containerRef = useRef<HTMLDivElement>(null)
@@ -30,9 +30,9 @@ const Experience: React.FC<Props> = (props) => {
 
 
     useEffect(() => {
-        const ctx = appGsap.context(() => {
+        const ctx = gsap.context(() => {
             if (!containerRef.current) return;
-            appScrollTrigger.create({
+            ScrollTrigger.create({
                 trigger: containerRef.current,
                 start: "top center",
                 end: "top center",
