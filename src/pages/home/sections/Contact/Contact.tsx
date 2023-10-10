@@ -4,6 +4,7 @@ import InputText from '@/_components/form/InputText/InputText';
 import InputTextarea from '@/_components/form/InputTextarea/InputTextarea';
 import clsx from 'clsx';
 import React, { FormEvent, useState } from 'react';
+import Vibe from './_components/Vibe';
 
 type Props = {
     className?: string,
@@ -33,10 +34,11 @@ const Contact: React.FC<Props> = (props) => {
     }
 
     return (
-        <section className={clsx(className, ["relative bg-base"])} id="contact">
+        <section className={clsx(className, ["relative"])} id="contact">
             <Container className={clsx(["flex flex-col py-10"], ["lg:flex-row"])}>
-                <div className="w-full"></div>
-                <form className='flex flex-col gap-5 w-full' onSubmit={handleOnFormSubmit}>
+                <Vibe className={clsx(["absolute inset-0 h-screen w-screen"])} />
+
+                <form className='flex flex-col gap-5 w-full z-1' onSubmit={handleOnFormSubmit}>
                     <h2 className={clsx(["font-700 text-md text-white"])}>
                         Lets build something amazing together!
                     </h2>
@@ -66,7 +68,6 @@ const Contact: React.FC<Props> = (props) => {
                         size={"md"}
                         label={'Submit'}
                         btnType="submit"
-                    // varient={"outlined"}
                     />
                 </form>
             </Container>

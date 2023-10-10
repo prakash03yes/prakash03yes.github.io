@@ -9,16 +9,7 @@ import Copywrite from './sections/Copywrite/Copywrite';
 
 const Home: React.FC = () => {
     return (
-        <>
-            <Header />
-            <main id='home'>
-                <Banner />
-                <Experience />
-                <Work />
-                <Contact />
-                <Copywrite />
-            </main>
-        </>
+        <Contact />
     );
 }
 
