@@ -1,23 +1,25 @@
 import clsx from 'clsx';
-import React, { useEffect, useRef } from 'react';
+import gsap from 'gsap';
+import React, { useLayoutEffect, useRef } from 'react';
 import SkillsCanvas from './_components/SkillsGlobe/SkillsCanvas';
 import WorkShitory from './_components/WorkHistory/WorkShitory';
+import { store } from '@/store';
 import { Container } from '@/_components/blocks';
 import { useAppDispatch } from '@/store/hooks';
 import { setSkillsShape } from '@/store/reducers/homeReducer';
-import { store } from '@/store';
-import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
+
 
 type Props = {
     className?: string,
 };
 
-gsap.registerPlugin(ScrollTrigger);
 const Experience: React.FC<Props> = (props) => {
     const { className = '' } = props;
     const containerRef = useRef<HTMLDivElement>(null)
     const dispatch = useAppDispatch();
+
 
     const handleOnShapeChange = () => {
         if (store.getState().homeReducer.skillsShape === "table") {
@@ -27,26 +29,20 @@ const Experience: React.FC<Props> = (props) => {
         }
     }
 
-
-
-    useEffect(() => {
+    useLayoutEffect(() => {
         const ctx = gsap.context(() => {
-            if (!containerRef.current) return;
             ScrollTrigger.create({
                 trigger: containerRef.current,
-                start: "top center",
-                end: "top center",
+                start: `center+=${window.innerHeight} center`,
+                end: `center+=${window.innerHeight} center`,
                 once: true,
                 onEnter: () => {
-                    console.log("first")
                     dispatch(setSkillsShape("spherical"));
                 },
-                markers: true,
             });
         }, containerRef);
         return () => ctx.revert();
-    }, [containerRef, dispatch]);
-
+    }, []);
 
 
 

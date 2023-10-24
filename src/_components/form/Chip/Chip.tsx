@@ -13,8 +13,8 @@ const Chip: React.FC<Props> = (props) => {
         <div className={clsx(className,
             [
                 "flex items-center justify-center",
-                "font-700 text-sm text-white text-center",
-                "px-4 py-0.5 border border-solid border-white rounded-3xl"
+                "font-700 text-sm text-gray200 text-center",
+                "px-4 py-0.5 border border-solid border-gray200 rounded-3xl"
             ])
         }>
             {label}

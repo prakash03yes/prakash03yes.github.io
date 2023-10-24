@@ -7,9 +7,18 @@ import Contact from './sections/Contact/Contact';
 import Copywrite from './sections/Copywrite/Copywrite';
 
 
+
+
 const Home: React.FC = () => {
     return (
-        <Contact />
+        <>
+            <Header />
+            <Banner />
+            <Experience />
+            <Work />
+            <Contact />
+            <Copywrite />
+        </>
     );
 }
 

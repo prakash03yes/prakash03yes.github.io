@@ -10,6 +10,8 @@ const roundedSquareWave = (t: number, delta: number, a: number, f: number) => {
 
 const Dots: React.FC = () => {
     const ref = useRef<InstancedMesh<BufferGeometry<NormalBufferAttributes>, Material | Material[]>>(null);
+    const waveDistance = useRef(25);
+
 
     const { vec, transform, positions, distances } = useMemo(() => {
         const vec = new Vector3()
@@ -45,7 +47,7 @@ const Dots: React.FC = () => {
             const dist = distances[i]
 
             // Distance affects the wave phase
-            const t = clock.elapsedTime - dist / 25
+            const t = clock.elapsedTime - dist / waveDistance.current;
 
             // Oscillates between -0.4 and +0.4 with period of 3.8 seconds
             const wave = roundedSquareWave(t, 0.15 + (0.2 * dist) / 72, 0.4, 1 / 3.8)

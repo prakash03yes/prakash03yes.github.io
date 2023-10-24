@@ -3,15 +3,12 @@ import { Stars } from '@react-three/drei';
 import { Group, Object3DEventMap } from 'three';
 import { useFrame, useThree } from '@react-three/fiber';
 import gsap from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 
 type Props = {
     containerRef: React.RefObject<HTMLDivElement>
 }
 
-
-gsap.registerPlugin(ScrollTrigger);
 const StarsBackground = (props: Props) => {
     const { containerRef } = props;
     const { camera } = useThree();
@@ -25,7 +22,6 @@ const StarsBackground = (props: Props) => {
                 scrollTrigger: {
                     trigger: containerRef.current,
                     start: "top middle",
-                    markers: true,
                     pin: true,
                     scrub: 1,
                 }

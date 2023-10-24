@@ -7,8 +7,8 @@ type Props = {
 }
 
 const initialState: Props = {
-    screenWidth: 0,
-    screenHeight: 0,
+    screenWidth: window.innerWidth,
+    screenHeight: window.innerHeight,
 }
 
 export const appReducer = createSlice({

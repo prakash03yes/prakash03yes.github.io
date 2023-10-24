@@ -19,7 +19,7 @@ const SkillsCanvas: React.FC<Props> = (props) => {
   return (
     <Canvas
       className={className}
-      camera={{ position: [0, 0, 50], fov: 90 }}
+      camera={{ position: [0, 0, window.innerWidth <= 400 ? 30 : 50], fov: 90 }}
     >
       <color attach="background" args={[Colors.base]} />
       <CustomControls />

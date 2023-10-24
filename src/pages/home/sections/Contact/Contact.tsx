@@ -35,8 +35,8 @@ const Contact: React.FC<Props> = (props) => {
 
     return (
         <section className={clsx(className, ["relative"])} id="contact">
-            <Container className={clsx(["flex flex-col py-10"], ["lg:flex-row"])}>
-                <Vibe className={clsx(["absolute inset-0 h-screen w-screen"])} />
+            <Container className={clsx(["flex flex-col py-10"], ["lg:flex-row lg:pb-20 lg:pt-40"])}>
+                <Vibe className={clsx(["absolute inset-0 w-screen"])} />
 
                 <form className='flex flex-col gap-5 w-full z-1' onSubmit={handleOnFormSubmit}>
                     <h2 className={clsx(["font-700 text-md text-white"])}>

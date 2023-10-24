@@ -17,7 +17,7 @@ const CustomOrbitControls: React.FC = () => {
 
     return <OrbitControls
         autoRotate={skillsShape === "spherical"}
-        enableZoom={false}
+        enableZoom={window.innerWidth <= 400 ? true : false}
         ref={controlsRef}
     />;
 };
