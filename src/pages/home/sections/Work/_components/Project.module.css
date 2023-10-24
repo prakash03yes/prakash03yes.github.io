@@ -1,0 +1,27 @@
+.project {
+  @apply relative w-full h-full overflow-hidden;
+  @apply border-2 border-solid border-white;
+}
+
+.project__imgWrap {
+  @apply flex items-center justify-center;
+}
+
+.project__img {
+  @apply w-full h-full object-cover;
+}
+
+.project__hoverCnt {
+  @apply flex items-center justify-center;
+  @apply absolute inset-0 bg-dark bg-opacity-80;
+  @apply translate-y-full;
+  @apply transition-transform duration-300;
+}
+
+.project:hover .project__hoverCnt {
+  @apply translate-y-0;
+}
+
+.project__title {
+  @apply font-700 text-lg text-white underline;
+}

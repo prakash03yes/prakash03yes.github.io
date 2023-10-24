@@ -1,9 +1,18 @@
 .header {
-  @apply fixed top-0 left-0 right-0 z-8 overflow-hidden;
+  @apply fixed top-0 left-0 right-0 z-8 overflow-hidden bg-transparent;
+  @apply transition-colors duration-300 ease-in-out;
+}
+
+.headerIsActive {
+  @apply bg-dark;
 }
 
 .header__container {
   @apply px-5 py-5 flex items-center justify-between;
+  @apply transition-all duration-300 ease-in-out;
+}
+.headerIsActive .header__container {
+  @apply py-2;
 }
 
 .header__logoWrap {

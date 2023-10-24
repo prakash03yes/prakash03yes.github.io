@@ -17,7 +17,7 @@ const HistoryYesoryes: React.FC<Props> = (props) => {
             <div className={clsx(["flex flex-col"], ["lg:flex-80 lg:max-w-[600px]"])}>
                 <LinkButton
                     id='YESORYES_LINK'
-                    href={'#'}
+                    href={'https://yesoryes.io/'}
                     className={clsx(['flex items-center gap-4', 'font-600 text-sm text-white'])}
                 >
                     <span className='whitespace-nowrap'>Lead - Developer</span>
@@ -27,19 +27,21 @@ const HistoryYesoryes: React.FC<Props> = (props) => {
                         <ArrowTopRightIcon />
                     </span>
                 </LinkButton>
-                <p className={clsx(["font-400 text-sm text-gray800 mt-4"])}>
+                <p className={clsx(["font-400 text-sm text-gray600 mt-4"])}>
                     Deliver high-quality, robust production code for a diverse array of projects for clients. Provide leadership within development department through close collaboration, knowledge shares, and mentorship.
                 </p>
                 <div className="flex items-center mt-4 gap-6">
                     <LinkButton
-                        id='REFFERY_LINK' href='#'
+                        id='REFFERY_LINK'
+                        href='https://reffery.com/'
                         className={clsx(["font-400 text-sm text-white", "flex items-center gap-2"])}
                     >
                         <LinkPinIcon />
                         <span>Reffery</span>
                     </LinkButton>
                     <LinkButton
-                        id='REFFERY_LINK' href='#'
+                        id='PAIDANT_LINK'
+                        href='https://www.paidant.com/'
                         className={clsx(["font-400 text-sm text-white", "flex items-center gap-2"])}
                     >
                         <LinkPinIcon />

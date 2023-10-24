@@ -1,6 +1,7 @@
 import clsx from 'clsx';
 import React, { useRef } from 'react';
 import { projects } from '../_constants/projects.const';
+import Project from './Project';
 
 
 
@@ -16,12 +17,8 @@ const Projects: React.FC<Props> = (props) => {
         <div ref={containerRef} className={clsx(className, ["grid grid-cols-2 relative overflow-hidden"])}>
             {
                 projects.map(project => (
-                    <a href={project.href} target="_blank">
-                        <img key={project.id}
-                            className='imageThumg imageThumg1 object-cover w-full h-full border-2 border-solid border-white'
-                            src={project.src}
-                            alt={project.name}
-                        />
+                    <a key={project.id} href={project.href} target="_blank">
+                        <Project name={project.name} src={project.src} />
                     </a>
                 ))
             }

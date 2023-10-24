@@ -31,6 +31,7 @@ const TextButton: React.FC<Props> = (props) => {
         <a
             id={id}
             href={href}
+            target="_blank"
             className={clsx(className, classes.link)}
             onClick={handleOnClick}
             onFocus={handleOnFocus}

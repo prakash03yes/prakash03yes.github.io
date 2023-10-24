@@ -11,11 +11,8 @@ type Props = {
 const Work: React.FC<Props> = (props) => {
     const { className = '' } = props;
 
-
-
-
     return (
-        <section className={clsx(className, "bg-dark")} id="work">
+        <section className={clsx(className, "bg-dark overflow-hidden flex flex-col gap-8")} id="work">
             <Reffery />
             <Projects />
         </section>
