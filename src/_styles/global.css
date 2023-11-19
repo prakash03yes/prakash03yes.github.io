@@ -9,5 +9,5 @@ html {
 
 body {
   font-family: "Montserrat", sans-serif;
-  @apply bg-dark;
+  @apply bg-russionBlue_100;
 }

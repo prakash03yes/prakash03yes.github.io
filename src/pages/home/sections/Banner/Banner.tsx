@@ -19,7 +19,7 @@ const Banner: React.FC<Props> = (props) => {
             <Container className={clsx(["flex items-center justify-center h-screen"])}>
 
                 <div className="absolute inset-0 w-screen h-screen">
-                    <Canvas>
+                    <Canvas camera={{ position: [0, 0, 300] }}>
                         <StarsBackground containerRef={containerRef} />
                         <color attach="background" args={[Colors.dark]} />
                     </Canvas>

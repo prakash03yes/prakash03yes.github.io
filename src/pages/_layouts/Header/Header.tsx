@@ -37,7 +37,7 @@ const Header: React.FC<Props> = (props) => {
     }, [])
 
     return (
-        <header className={clsx(className, classes.header, isHeaderOpen && classes.opened, isHeaderActive && classes.headerIsActive)}>
+        <header className={clsx(className, classes.header, isHeaderOpen && classes.opened)}>
             <Container className={classes.header__container}>
                 <div className={classes.header__logoWrap}>
                     <span className='font-700 text-sm text-white'>Jp</span>

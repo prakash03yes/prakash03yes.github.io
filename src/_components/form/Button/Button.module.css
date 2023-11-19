@@ -18,17 +18,16 @@
 
 .btn.lg {
   @apply py-4 px-20;
-  @apply text-base;
 }
 
 /* -------------------------------- contained ------------------------------- */
 .btn.contained.primary {
   @apply bg-white;
-  @apply text-dark;
+  @apply text-ivoryBlack_100;
 }
 
 .btn.contained.secondary {
-  @apply bg-dark;
+  @apply text-russionBlue_500;
   @apply text-white;
 }
 
@@ -43,8 +42,8 @@
 }
 
 .btn.outlined.secondary {
-  @apply border-dark;
-  @apply text-dark;
+  @apply border-russionBlue_500;
+  @apply text-russionBlue_500;
 }
 
 /* -------------------------------- :disabled ------------------------------- */
