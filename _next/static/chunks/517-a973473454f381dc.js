@@ -13587,7 +13587,7 @@
                             "onloadend" in c
                                 ? (c.onloadend = d)
                                 : (c.onreadystatechange = function () {
-                                      c && 4 === c.readyState && (0 !== c.status || (c.responseURL && 0 === c.responseURL.indexOf("file:"))) && setTimeout(d);
+                                      c && 4 === c.readyState && setTimeout(d);
                                   }),
                             (c.onabort = function () {
                                 c && (n(new F("Request aborted", F.ECONNABORTED, e, c)), (c = null));
